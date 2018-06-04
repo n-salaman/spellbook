@@ -1,19 +1,10 @@
 const button = document.querySelector('button')
 
-const update1 = function() {
-    const heading = document.querySelector('h1')
-    heading.textContent = 'Spellbook 2'
-
+function changeHead() {
+  const heading = document.querySelector('#head2')
+  heading.textContent = 'Chapter 1: Potions'
 }
 
+button.addEventListener('click', changeHead)
 
-const button = document.querySelector('button')
 
-const sayContents = function() {
-  const heading = document.querySelector('h1')
-  heading.textContent = 'I <3 JavaScript'
-}
-
-button.addEventListener('click', sayContents)
-
-sayContents()
