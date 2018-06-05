@@ -1,6 +1,8 @@
-document.getElementById("frm").addEventListener('submit', changeHead);
+//check to see when the form is submitted
+document.getElementById("frm").addEventListener('submit', changeForm);
 
-function changeHead() {
+//this function changes the first header based on what was entered into form
+function changeForm() {
   const x = document.getElementById("frm")
   const text = x.elements[0].value
 
@@ -8,24 +10,16 @@ function changeHead() {
 
 }
 
-const form = document.querySelector('form')
 
-form.addEventListener('submit')
-form.addEvne
+//checks to see when button is clicked
+document.getElementById("butt").addEventListener('click', changeHead);
 
+//changes the 2nd header
+function changeHead(){
+    const text = "Potions book"
+    document.getElementById("head2").innerHTML = text
+}
 
-
-/*var input = document.getElementById("newInput")
-input.addEventListener("keyup", function(event) {
-    event.preventDefault()
-    if (event.keyCode === 13) {
-        alert("hello")
-        document.getElementById("butt").click()
-    }
-})
-
-<button id="butt" onclick="changeHead()">Submit</button>
-*/
 
 
 
