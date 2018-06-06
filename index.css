@@ -132,3 +132,13 @@ ul#spells {
   font-size: 0.7em;
   margin-top: -1rem;
 }
+
+.spell{
+  color: rgba(100, 50, 0, 0.8);
+  font-size: 1em;
+}
+
+.cast{
+    color: rgba(2, 1, 0, 0.486);
+    font-size: 0.7em;   
+}
