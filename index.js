@@ -1,11 +1,20 @@
 const form = document.querySelector('form')
 
-/*const spellSpan = function(spellName) {
+const spellSpan = function(spellName) {
     const spellSpn = document.createElement("SPAN")
     spellSpn.textContent = spellName
     spellSpn.setAttribute('class', 'spell')
     document.getElementById("spells").appendChild(spellSpn)
-}*/
+    document.getElementById("spells").appendChild(document.createElement("br"))
+}
+
+const castSpan = function(castSpeed) {
+    const castSpn = document.createElement("SPAN")
+    castSpn.textContent = `-${castSpeed} magic seconds`
+    castSpn.setAttribute('class', 'cast')
+    document.getElementById("spells").appendChild(castSpn)
+    document.getElementById("spells").appendChild(document.createElement("br"))
+}
 
 const changeHeading = function(ev) {
   ev.preventDefault()
@@ -14,23 +23,11 @@ const changeHeading = function(ev) {
   const spellName = f.spellName.value
   const castSpeed = f.castSpeed.value
 
-  //const spellsDiv = document.querySelector('#spells')
+ 
 
-  const spellSpn = document.createElement("SPAN")
-  spellSpn.textContent = spellName
-  spellSpn.setAttribute('class', 'spell')
-  document.getElementById("spells").appendChild(spellSpn)
+  spellSpan(spellName)
 
-  document.getElementById("spells").appendChild(document.createElement("br"))
-
-  const castSpn = document.createElement("SPAN")
-  castSpn.textContent = `-${castSpeed} magic seconds`
-  castSpn.setAttribute('class', 'cast')
-  document.getElementById("spells").appendChild(castSpn)
-  
-  /*const div2 = document.createElement("div")
-  div2.textContent=`-${castSpeed} magic seconds`
-  document.getElementById("spells").appendChild(div2)*/
+  castSpan(castSpeed)
 
   f.reset()
 }
