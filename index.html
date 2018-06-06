@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Spellbook</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Spellbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <!-- headers that show all the books -->
-    <h1 id="head1">Spellbook</h1>
+  <img src="skull.png" id="skull" alt="">
+  <img src="quill.png" id="quill" alt="">
 
-    <h1 id="head2">Cookbook</h1>
+  <h1>Spellbook</h1>
 
-    <h1 id="head3">Math book</h1>
+  <form>
+    <div>
+      <input
+        type="text"
+        name="spellName"
+        placeholder="Enter a spell name"
+        autofocus
+      >
+      <input
+        type="text"
+        name="castSpeed"
+        placeholder="Enter cast speed"
+        autofocus
+      >
+      <button type="submit">Add</button>
+    </div>
+  </form>
 
-    <!-- form that allows user to submit new book-->
-    <form id="frm" onSubmit="return false">
-        Change 1st book: <input type="text"
-            id = "newInput"/>
-        <br><br>
-        <input type="submit" value="submit">
-        <br><br>
-    </form>
+  <main>
+    <ul id="spells"></ul>
+  </main>
 
-    <!-- button that chages the 2nd book-->
-    <button id="butt">Change 2nd book</button>
-
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

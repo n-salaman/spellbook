@@ -1,24 +1,21 @@
-//check to see when the form is submitted
-document.getElementById("frm").addEventListener('submit', changeForm);
+const form = document.querySelector('form')
 
-//this function changes the first header based on what was entered into form
-function changeForm() {
-  const x = document.getElementById("frm")
-  const text = x.elements[0].value
+const changeHeading = function(ev) {
+  ev.preventDefault()
 
-  document.getElementById("head1").innerHTML = text
+  const f = ev.target
+  const spellName = f.spellName.value
+  const castSpeed = f.castSpeed.value
 
+  const spellsDiv = document.querySelector('#spells')
+  spellsDiv.innerHTML += `<li>${spellName}    ${castSpeed}</li>` 
+
+  
+
+  f.reset()
 }
 
-
-//checks to see when button is clicked
-document.getElementById("butt").addEventListener('click', changeHead);
-
-//changes the 2nd header
-function changeHead(){
-    const text = "Potions book"
-    document.getElementById("head2").innerHTML = text
-}
+form.addEventListener('submit', changeHeading)
 
 
 
