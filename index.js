@@ -8,12 +8,21 @@ const changeHeading = function(ev) {
   const castSpeed = f.castSpeed.value
 
   const spellsDiv = document.querySelector('#spells')
-  spellsDiv.innerHTML += `<li>${spellName}    ${castSpeed}</li>` 
 
+  const div = document.createElement("div")
+  div.textContent=spellName
+  document.getElementById("spells").appendChild(div)
   
+  const div2 = document.createElement("div")
+  div2.textContent=`-${castSpeed} magic seconds`
+  document.getElementById("spells").appendChild(div2)
 
   f.reset()
 }
+
+/*const spellSpan = function(spellName) {
+    const spellS
+}*/
 
 form.addEventListener('submit', changeHeading)
 
